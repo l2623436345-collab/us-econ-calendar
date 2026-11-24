@@ -1,0 +1,13 @@
+{
+  "name": "black-tech-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chinese personal blog for Cloudflare Pages",
+  "scripts": {
+    "dev": "wrangler pages dev public",
+    "deploy": "wrangler pages deploy public --project-name black-blog"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

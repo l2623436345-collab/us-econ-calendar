@@ -1,0 +1,12 @@
+name = "black-blog"
+compatibility_date = "2026-11-24"
+pages_build_output_dir = "./public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "black-blog-db"
+database_id = "61b8f38c-3780-4394-b2f1-a5c7f6734440"
+
+[[r2_buckets]]
+binding = "BLOG_IMAGES"
+bucket_name = "black-blog-images"

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080a0f"><title>内容管理 · BLACK/LOG</title><link rel="stylesheet" href="/assets/style.css"></head>
+<body class="admin-body"><header class="topbar"><a class="brand" href="/"><span class="brand-mark">◆</span> BLACK<span class="muted">/</span>LOG <small>STUDIO</small></a><nav><a href="/">查看博客</a></nav></header>
+<main class="wrap admin-wrap">
+<section id="login-panel" class="login-panel"><div class="eyebrow">PRIVATE WORKSPACE</div><h1>内容管理</h1><p class="muted-text">登录后管理你的文章与图片。</p><form id="login-form"><label>后台密码<input id="password" type="password" required autocomplete="current-password" placeholder="输入后台密码"></label><button class="primary-btn" type="submit">登录后台 <span>→</span></button><p id="login-error" class="error"></p></form></section>
+<section id="dashboard" hidden>
+<div class="section-head"><div><div class="eyebrow">CONTENT STUDIO</div><h1>文章管理</h1></div><button id="logout" class="ghost-btn">退出登录</button></div>
+<div class="admin-layout"><aside class="admin-sidebar"><button id="new-article" class="primary-btn full">＋ 新建文章</button><div id="admin-list" class="admin-list"></div></aside>
+<div class="editor"><form id="article-form">
+<input type="hidden" id="article-id"><label>文章标题<input id="title" required maxlength="120" placeholder="给这篇文章起个标题"></label>
+<div class="two-fields"><label>分类<input id="category" value="随笔" maxlength="40"></label><label>文章标识（slug）<input id="slug" placeholder="自动生成，可修改"></label></div>
+<label>文章摘要<textarea id="summary" rows="2" maxlength="240" placeholder="用一两句话介绍文章"></textarea></label>
+<label>封面图片 URL<input id="cover" placeholder="上传图片后自动填入，也可以粘贴图片地址"></label>
+<div class="upload-row"><input id="image-file" type="file" accept="image/png,image/jpeg,image/webp,image/gif"><button id="upload-image" class="ghost-btn" type="button">上传图片</button><span id="upload-status" class="muted-text"></span></div>
+<label>正文（支持 Markdown）<textarea id="content" class="content-input" rows="18" required placeholder="# 写下你的想法&#10;&#10;支持 Markdown：标题、列表、链接、图片等。&#10;上传图片后可复制图片地址，使用 ![图片说明](图片地址) 插入正文。"></textarea></label>
+<div class="editor-actions"><label class="check-label"><input id="published" type="checkbox"> 立即发布</label><div><button id="delete-article" type="button" class="danger-btn" hidden>删除</button> <button class="primary-btn" type="submit">保存文章 <span>→</span></button></div></div><p id="save-status" class="muted-text"></p>
+</form></div></div>
+</section></main><script src="/assets/admin.js"></script></body></html>
